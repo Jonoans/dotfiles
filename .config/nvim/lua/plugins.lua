@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
     use { 'nvim-telescope/telescope-fzf-native.nvim', run='make' }
     use 'nvim-telescope/telescope.nvim'
     use 'nvim-telescope/telescope-file-browser.nvim'
+    use 'nvim-tree/nvim-tree.lua'
 
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-buffer'
@@ -45,9 +46,6 @@ return require('packer').startup(function(use)
     use 'jose-elias-alvarez/null-ls.nvim'
     use 'jayp0521/mason-null-ls.nvim'
 
-    use 'nvim-lualine/lualine.nvim'
-    use 'nvim-tree/nvim-web-devicons'
-
     use {
         'nvim-treesitter/nvim-treesitter',
         run = function()
@@ -57,6 +55,9 @@ return require('packer').startup(function(use)
 
     use 'windwp/nvim-autopairs'
     use 'windwp/nvim-ts-autotag'
+
+    use 'nvim-lualine/lualine.nvim'
+    use 'nvim-tree/nvim-web-devicons'
 
     if packer_bootstrap then
         require('packer').sync()

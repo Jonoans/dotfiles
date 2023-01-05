@@ -2,7 +2,6 @@ vim.g.mapleader = ' '
 
 local keymap = vim.keymap
 -- general keymaps
-keymap.set('n', '<Leader>s', ':%s///g')
 keymap.set('n', '<Leader>wq', ':wq<CR>')
 keymap.set('n', '<Leader>q', ':q!<CR>')
 keymap.set('i', '<C->>', '<C-o>l')
@@ -21,7 +20,8 @@ keymap.set('n', '<Leader>t>', ':tabn<CR>')
 keymap.set('n', '<Leader>t<lt>', ':tabp<CR>')
 
 -- telescope-file-browser
-keymap.set('n', '<Leader>ex', ':Telescope file_browser hidden=true<CR>')
+keymap.set('n', '<Leader>eb', ':NvimTreeToggle<CR>')
+keymap.set("n", "<Leader>ex", ":Telescope file_browser hidden=true<CR>")
 keymap.set("n", "<Leader>ef", ":Telescope find_files hidden=true<CR>")
 keymap.set("n", "<Leader>es", ":Telescope live_grep hidden=true<CR>")
 keymap.set("n", "<Leader>ec", ":Telescope grep_string hidden=true<CR>")
