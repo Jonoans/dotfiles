@@ -1,5 +1,7 @@
 local opt = vim.opt
 
+opt.encoding = 'utf-8'
+opt.listchars = 'tab:» ,extends:›,precedes:‹,nbsp:·,trail:·'
 opt.relativenumber = true
 opt.number = true
 opt.tabstop = 4
@@ -11,13 +13,11 @@ opt.wrap = false
 
 opt.cursorline = true
 opt.termguicolors = true
-opt.background = "dark"
-opt.signcolumn = "yes"
+opt.background = 'dark'
+opt.signcolumn = 'yes'
 
-opt.backspace = "indent,eol,start"
-opt.clipboard:append("unnamedplus")
+opt.backspace = 'indent,eol,start'
+opt.clipboard:append('unnamedplus')
 
 opt.splitright = true
 opt.splitbelow = true
-
-opt.iskeyword:append("-")

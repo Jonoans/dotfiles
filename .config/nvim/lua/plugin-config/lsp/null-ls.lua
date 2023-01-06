@@ -3,23 +3,33 @@ if not status then
     return
 end
 
+local augroup = vim.api.nvim_create_augroup("NullLsFormatting", {})
 local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
     sources = {
-        formatting.prettier,
         formatting.gofmt,
+        formatting.stylua,
+        formatting.prettierd.with({
+            env = {
+                PRETTIERD_DEFAULT_CONFIG = vim.fn.expand('~/.config/.prettierrc.json')
+            }
+        }),
         diagnostics.eslint_d
     },
     on_attach = function(client, bufnr)
-        if client.supports_method("textDocument/formatting") then
+        if client.supports_method('textDocument/formatting') then
             vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
             vim.api.nvim_create_autocmd("BufWritePre", {
                 group = augroup,
                 buffer = bufnr,
                 callback = function()
-                    vim.lsp.buf.format({ bufnr = bufnr })
+                    vim.lsp.buf.format({
+                        bufnr = bufnr,
+                        filter = function(clt)
+                            return clt.name == 'null-ls'
+                        end
+                    })
                 end,
             })
         end
