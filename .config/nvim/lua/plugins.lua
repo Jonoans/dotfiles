@@ -55,6 +55,7 @@ return require('packer').startup(function(use)
 
     use 'windwp/nvim-autopairs'
     use 'windwp/nvim-ts-autotag'
+    use 'lewis6991/gitsigns.nvim'
 
     use 'nvim-lualine/lualine.nvim'
     use 'nvim-tree/nvim-web-devicons'

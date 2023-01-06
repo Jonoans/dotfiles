@@ -4,8 +4,6 @@ local keymap = vim.keymap
 -- general keymaps
 keymap.set('n', '<Leader>wq', ':wq<CR>')
 keymap.set('n', '<Leader>q', ':q!<CR>')
-keymap.set('i', '<C->>', '<C-o>l')
-keymap.set('i', '<C-<>', '<C-o>h')
 
 -- split windows
 keymap.set('n', '<Leader>sv', '<C-w>v')
