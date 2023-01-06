@@ -13,7 +13,8 @@ vim.cmd([[
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-    use 'bluz71/vim-nightfly-guicolors'
+    use 'EdenEast/nightfox.nvim'
+    use 'nanozuki/tabby.nvim'
 
     use 'christoomey/vim-tmux-navigator'
     use 'tpope/vim-repeat'
