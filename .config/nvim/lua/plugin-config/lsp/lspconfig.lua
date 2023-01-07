@@ -14,19 +14,19 @@ local on_attach = function(client, bufnr)
     local opts = { noremap = true, silent = true, buffer = bufnr }
 
     -- set keybinds
-    keymap.set("n", "gf", "<Cmd>Lspsaga lsp_finder<CR>", opts) -- show definition, references
-    keymap.set("n", "gD", "<Cmd>lua lsp.buf.declaration()<CR>", opts) -- got to declaration
-    keymap.set("n", "gd", "<Cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window
-    keymap.set("n", "gi", "<Cmd>lua lsp.buf.implementation()<CR>", opts) -- go to implementation
-    keymap.set("n", "<leader>ca", "<Cmd>Lspsaga code_action<CR>", opts) -- see available code actions
-    keymap.set("n", "<leader>rn", "<Cmd>Lspsaga rename<CR>", opts) -- smart rename
-    keymap.set("n", "<leader>D", "<Cmd>Lspsaga show_line_diagnostics<CR>", opts) -- show  diagnostics for line
-    keymap.set("n", "<leader>d", "<Cmd>Lspsaga show_cursor_diagnostics<CR>", opts) -- show diagnostics for cursor
-    keymap.set("n", "[d", "<Cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to previous diagnostic in buffer
-    keymap.set("n", "]d", "<Cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
-    keymap.set("n", "K", "<Cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
-    keymap.set("i", "<C-k>", "<C-o><Cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
-    keymap.set("n", "<leader>o", "<Cmd>LSoutlineToggle<CR>", opts) -- see outline on right hand side
+    keymap.set('n', 'gf', '<Cmd>Lspsaga lsp_finder<CR>', opts) -- show definition, references
+    keymap.set('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts) -- got to declaration
+    keymap.set('n', 'gd', '<Cmd>Lspsaga peek_definition<CR>', opts) -- see definition and make edits in window
+    keymap.set('n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>', opts) -- go to implementation
+    keymap.set('n', '<leader>ca', '<Cmd>Lspsaga code_action<CR>', opts) -- see available code actions
+    keymap.set('n', '<leader>rn', '<Cmd>Lspsaga rename<CR>', opts) -- smart rename
+    keymap.set('n', '<leader>D', '<Cmd>Lspsaga show_line_diagnostics<CR>', opts) -- show  diagnostics for line
+    keymap.set('n', '<leader>d', '<Cmd>Lspsaga show_cursor_diagnostics<CR>', opts) -- show diagnostics for cursor
+    keymap.set('n', '[d', '<Cmd>Lspsaga diagnostic_jump_prev<CR>', opts) -- jump to previous diagnostic in buffer
+    keymap.set('n', ']d', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts) -- jump to next diagnostic in buffer
+    keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts) -- show documentation for what is under cursor
+    keymap.set('i', '<C-k>', '<C-o><Cmd>Lspsaga hover_doc<CR>', opts) -- show documentation for what is under cursor
+    keymap.set('n', '<leader>o', '<Cmd>LSoutlineToggle<CR>', opts) -- see outline on right hand side
     keymap.set('n', '<space>f', '<Cmd>lua vim.lsp.buf.format()<CR>', opts)
 
     if client.name == 'tsserver' then
@@ -40,9 +40,10 @@ local capabilities = cmp_nvim_lsp.default_capabilities()
 lspconfig.html.setup { capabilities = capabilities, on_attach = on_attach }
 lspconfig.gopls.setup { capabilities = capabilities, on_attach = on_attach }
 lspconfig.cssls.setup { capabilities = capabilities, on_attach = on_attach }
-lspconfig.tsserver.setup { capabilities = capabilities, on_attach = on_attach, init_options = { hostInfo = "neovim" } }
+lspconfig.tsserver.setup { capabilities = capabilities, on_attach = on_attach }
 lspconfig.sumneko_lua.setup {
-    capabilities = capabilities, on_attach = on_attach,
+    capabilities = capabilities,
+    on_attach = on_attach,
     settings = {
         Lua = {
             diagnostics = {
@@ -50,10 +51,10 @@ lspconfig.sumneko_lua.setup {
             },
             workspace = {
                 library = {
-                    [vim.fn.expand('$VIMRUNTIME/lua')] = true,
-                    [vim.fn.stdpath('config') .. '/lua'] = true
+                    [vim.fn.expand '$VIMRUNTIME/lua'] = true,
+                    [vim.fn.stdpath 'config' .. '/lua'] = true,
                 },
-            }
-        }
-    }
+            },
+        },
+    },
 }
