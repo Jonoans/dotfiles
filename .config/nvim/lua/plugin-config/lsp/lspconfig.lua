@@ -37,10 +37,10 @@ end
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
 -- language servers
-lspconfig.html.setup { capabilities = capabilities, on_attach = on_attach }
-lspconfig.gopls.setup { capabilities = capabilities, on_attach = on_attach }
 lspconfig.cssls.setup { capabilities = capabilities, on_attach = on_attach }
-lspconfig.tsserver.setup { capabilities = capabilities, on_attach = on_attach }
+lspconfig.gopls.setup { capabilities = capabilities, on_attach = on_attach }
+lspconfig.html.setup { capabilities = capabilities, on_attach = on_attach }
+lspconfig.pyright.setup { capabilities = capabilities, on_attach = on_attach }
 lspconfig.sumneko_lua.setup {
     capabilities = capabilities,
     on_attach = on_attach,
@@ -58,3 +58,4 @@ lspconfig.sumneko_lua.setup {
         },
     },
 }
+lspconfig.tsserver.setup { capabilities = capabilities, on_attach = on_attach }

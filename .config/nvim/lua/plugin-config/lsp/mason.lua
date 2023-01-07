@@ -14,22 +14,24 @@ if not mason_null_ls_status then
 end
 
 mason.setup()
-mason_lspcfg.setup({
+mason_lspcfg.setup {
     ensure_installed = {
+        'cssls',
         'gopls',
         'graphql',
-        'html', 'cssls',
+        'html',
+        'pyright',
         'sumneko_lua',
         'tsserver',
     },
-    automatic_installation = true
-})
+    automatic_installation = true,
+}
 
-mason_null_ls.setup({
+mason_null_ls.setup {
     ensure_installed = {
+        'eslint_d',
+        'gofmt',
         'prettierd',
         'stylua',
-        'eslint_d',
-        'gofmt'
-    }
-})
+    },
+}
