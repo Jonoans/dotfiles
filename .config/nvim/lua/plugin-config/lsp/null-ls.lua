@@ -8,6 +8,14 @@ local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup {
     sources = {
+        formatting.clang_format.with {
+            extra_args = function(params)
+                return params.options and {
+                    '--style',
+                    '{BasedOnStyle: llvm, IndentWidth: 4}',
+                }
+            end,
+        },
         formatting.gofmt,
         formatting.prettierd.with {
             env = {

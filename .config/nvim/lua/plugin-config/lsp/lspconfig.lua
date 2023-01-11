@@ -37,6 +37,7 @@ end
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
 -- language servers
+lspconfig.clangd.setup { capabilities = capabilities, on_attach = on_attach }
 lspconfig.cssls.setup { capabilities = capabilities, on_attach = on_attach }
 lspconfig.gopls.setup { capabilities = capabilities, on_attach = on_attach }
 lspconfig.html.setup { capabilities = capabilities, on_attach = on_attach }

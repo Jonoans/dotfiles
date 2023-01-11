@@ -16,6 +16,7 @@ end
 mason.setup()
 mason_lspcfg.setup {
     ensure_installed = {
+        'clangd',
         'cssls',
         'gopls',
         'graphql',
