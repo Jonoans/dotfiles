@@ -35,9 +35,11 @@ local on_attach = function(client, bufnr)
 end
 
 local capabilities = cmp_nvim_lsp.default_capabilities()
+local clangd_capabilities = cmp_nvim_lsp.default_capabilities()
+clangd_capabilities.offsetEncoding = { 'utf-16' }
 
 -- language servers
-lspconfig.clangd.setup { capabilities = capabilities, on_attach = on_attach }
+lspconfig.clangd.setup { capabilities = clangd_capabilities, on_attach = on_attach }
 lspconfig.cssls.setup { capabilities = capabilities, on_attach = on_attach }
 lspconfig.gopls.setup { capabilities = capabilities, on_attach = on_attach }
 lspconfig.html.setup { capabilities = capabilities, on_attach = on_attach }
