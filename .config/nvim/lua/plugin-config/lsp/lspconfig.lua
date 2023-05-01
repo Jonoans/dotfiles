@@ -44,7 +44,7 @@ lspconfig.cssls.setup { capabilities = capabilities, on_attach = on_attach }
 lspconfig.gopls.setup { capabilities = capabilities, on_attach = on_attach }
 lspconfig.html.setup { capabilities = capabilities, on_attach = on_attach }
 lspconfig.pyright.setup { capabilities = capabilities, on_attach = on_attach }
-lspconfig.sumneko_lua.setup {
+lspconfig.lua_ls.setup {
     capabilities = capabilities,
     on_attach = on_attach,
     settings = {
