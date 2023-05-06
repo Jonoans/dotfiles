@@ -13,8 +13,8 @@ nvim_tree.setup {
         icons = {
             glyphs = {
                 folder = {
-                    arrow_closed = '',
-                    arrow_open = ''
+                    arrow_closed = '\u{f067}',
+                    arrow_open = '\u{f068}'
                 }
             }
         }
