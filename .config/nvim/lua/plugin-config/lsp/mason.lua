@@ -18,7 +18,7 @@ mason_lspcfg.setup {
     ensure_installed = {
         'clangd',
         'cssls',
-        'golangci_lint_ls',
+        'gopls',
         'graphql',
         'html',
         'lua_ls',
