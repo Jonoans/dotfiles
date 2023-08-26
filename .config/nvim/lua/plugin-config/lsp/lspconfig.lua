@@ -39,7 +39,11 @@ local clangd_capabilities = cmp_nvim_lsp.default_capabilities()
 clangd_capabilities.offsetEncoding = { 'utf-16' }
 
 -- language servers
-lspconfig.clangd.setup { capabilities = clangd_capabilities, on_attach = on_attach }
+lspconfig.clangd.setup {
+    capabilities = clangd_capabilities,
+    on_attach = on_attach,
+    filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda', 'proto', 'arduino' },
+}
 lspconfig.cssls.setup { capabilities = capabilities, on_attach = on_attach }
 lspconfig.gopls.setup { capabilities = capabilities, on_attach = on_attach }
 lspconfig.html.setup { capabilities = capabilities, on_attach = on_attach }

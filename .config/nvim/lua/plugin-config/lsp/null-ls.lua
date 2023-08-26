@@ -9,6 +9,7 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup {
     sources = {
         formatting.clang_format.with {
+            extra_filetypes = { 'arduino' },
             extra_args = function(params)
                 return params.options and {
                     '--style',
