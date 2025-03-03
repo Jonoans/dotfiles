@@ -15,6 +15,8 @@ git clone https://github.com/LazyVim/starter ~/.config/nvim
 pushd ~/.config/nvim
 rm -rf .git
 
+echo "vim.lsp.set_log_level(\"ERROR\")" >>lua/config/options.lua
+
 # nvim keymaps
 cat >lua/config/keymaps.lua <<EOF
 vim.g.mapleader = ' '
@@ -25,21 +27,6 @@ keymap.set('n', '<Leader>sv', '<C-w>v')
 keymap.set('n', '<Leader>sh', '<C-w>s')
 keymap.set('n', '<Leader>se', '<C-w>=')
 keymap.set('n', '<Leader>sq', ':close<CR>')
-
--- telescope-file-browser
-keymap.set('n', '<Leader>eb', ':Neotree toggle<CR>')
-keymap.set("n", "<Leader>ex", ":Telescope file_browser hidden=true<CR>")
-keymap.set("n", "<Leader>ef", ":Telescope find_files hidden=true<CR>")
-keymap.set("n", "<Leader>es", ":Telescope live_grep hidden=true<CR>")
-keymap.set("n", "<Leader>ec", ":Telescope grep_string hidden=true<CR>")
-EOF
-
-# nvim telescope
-cat >lua/plugins/telescope.lua <<EOF
-return {
-  "nvim-telescope/telescope.nvim",
-  dependencies = { 'nvim-lua/plenary.nvim' },
-}
 EOF
 
 # nvim theme
@@ -124,13 +111,24 @@ return {
 EOF
 
 # nvim-tree
-cat >lua/plugins/nvim-tree.lua <<EOF
+cat >lua/plugins/snacks.lua <<EOF
 return {
-  "nvim-neo-tree/neo-tree.nvim",
+  "folke/snacks.nvim",
+  ---@type snacks.Config
   opts = {
-    filesystem = {
-      filtered_items = {
-        visible = true,
+    explorer = {
+      -- your explorer configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    },
+    picker = {
+      sources = {
+        explorer = {
+          -- your explorer picker configuration comes here
+          -- or leave it empty to use the default settings
+          hidden = true,
+          ignored = true,
+        },
       },
     },
   },
