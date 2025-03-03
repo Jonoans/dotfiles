@@ -2,7 +2,7 @@
 
 # brew stuff - TODO: add stuff soon
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install --cask rectangle
+brew install --cask rectangle font-meslo-lg-nerd-font
 
 # install tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
