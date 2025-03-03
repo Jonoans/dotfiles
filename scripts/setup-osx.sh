@@ -100,4 +100,52 @@ return {
     }
 }
 EOF
+
+# nvim lspconfig
+cat >lua/plugins/lsp.lua <<EOF
+return {
+  "neovim/nvim-lspconfig",
+  ---@class PluginLspOpts
+  opts = {
+    ---@type lspconfig.options
+    setup = {
+      pylsp = {
+        plugins = {
+          pycodestyle = {
+            ignore = { "E302", "E501" },
+            maxLineLength = 100,
+          },
+          yapf = { enabled = false },
+        },
+      },
+    },
+  },
+}
+EOF
+
+# nvim-tree
+cat >lua/plugins/nvim-tree.lua <<EOF
+return {
+  "nvim-neo-tree/neo-tree.nvim",
+  opts = {
+    filesystem = {
+      filtered_items = {
+        visible = true,
+      },
+    },
+  },
+}
+EOF
+
+# fzf icons
+cat >lua/plugins/fzf-lua.lua <<EOF
+return {
+  "ibhagwan/fzf-lua",
+  -- optional for icon support
+  dependencies = { "nvim-tree/nvim-web-devicons" },
+  -- or if using mini.icons/mini.nvim
+  -- dependencies = { "echasnovski/mini.icons" },
+  opts = {}
+}
+EOF
 popd
