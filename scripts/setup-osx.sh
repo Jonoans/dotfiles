@@ -4,11 +4,13 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install --cask rectangle font-meslo-lg-nerd-font
 
-# install tpm
+# install tmux
+brew install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+~/.tmux/plugins/tpm/bin/install_plugins
 
 # nvim setup
-brew install ripgrep fd fzf
+brew install neovim ripgrep fd fzf
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 
 # nvim configuration
