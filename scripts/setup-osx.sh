@@ -17,7 +17,7 @@ git clone https://github.com/LazyVim/starter ~/.config/nvim
 pushd ~/.config/nvim
 rm -rf .git
 
-echo "vim.lsp.set_log_level(\"ERROR\")" >>lua/config/options.lua
+echo "vim.lsp.log.set_level(vim.log.levels.ERROR)" >>lua/config/options.lua
 
 # nvim keymaps
 cat >lua/config/keymaps.lua <<EOF
