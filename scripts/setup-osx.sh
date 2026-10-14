@@ -13,6 +13,9 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 brew install neovim ripgrep fd fzf
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 
+# ide setup
+brew install --cask claude-code@latest visual-studio-code
+
 # nvim configuration
 pushd ~/.config/nvim
 rm -rf .git
