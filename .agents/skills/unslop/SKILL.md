@@ -33,6 +33,7 @@ Rewrite text so it reads like a person wrote it. The meaning and facts as well a
 - Headings, bullets, and bold applied to text that works fine as plain paragraphs.
 - Recaps of each section in a short piece.
 - Two clauses stuck together with a semicolon or similar. Write two sentences or add a conjunction.
+- Terse command pairs such as "Do X. Prefer X over Y." or "Use X, not Y." Say how to apply the rule and why, so the reader can handle cases the pair doesn't cover.
 
 **Tone**
 - Enthusiasm, praise, or sympathy the content doesn't call for.
