@@ -7,7 +7,7 @@ description: Launch the project's app and confirm a change works in the real app
 
 ## Steps
 
-1. Find how the project is launched: README, docs, `AGENTS.md`, `CLAUDE.md`, package scripts, Makefile, or compose files. Use an existing project skill for launching the app if there is one.
+1. Find how the project is launched: `.audit/feature-map.md` (entry points and commands), README, docs, `AGENTS.md`, `CLAUDE.md`, package scripts, Makefile, or compose files. Use an existing project skill for launching the app if there is one. If the map is missing, run `familiarise` in a subagent.
 2. Install dependencies and set up configuration only as far as the docs require. Never invent secrets.
 3. Start the app in the background and wait until it is ready, for example a log line or a responding port.
 4. Exercise the changed behaviour the way a user would: call the endpoint, run the CLI command, or drive the UI with a browser skill. Check the output against what was requested.

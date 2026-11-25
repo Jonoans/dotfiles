@@ -11,7 +11,7 @@ Produce an implementation plan that fits the existing codebase. Do not write the
 
 1. Restate what must be built and the constraints, using the familiarisation summary if one exists.
 2. Check the premise: is the requirement sound, and is it already solved by something that exists? If not sound or already solved, say so before designing.
-3. Decide where the change belongs: which files, modules, and interfaces are added or modified, and which existing code is reused. Include every touchpoint found during familiarisation.
+3. Decide where the change belongs: which files, modules, and interfaces are added or modified, and which existing code is reused. Take locations and registration points from `.audit/feature-map.md`, and include every touchpoint found during familiarisation. If the map is missing, run `familiarise` in a subagent first.
 4. Define the design: components, their responsibilities, the data flow between them, and the public interfaces.
 5. Drop any new field, option, or other addition that no requirement or caller uses.
 6. Check the design against the `principle-coding-guidelines` skill and revise where it falls short.

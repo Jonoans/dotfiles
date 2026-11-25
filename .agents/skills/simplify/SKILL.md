@@ -9,7 +9,7 @@ description: Review changed code for reuse, simplicity, and efficiency, then app
 
 1. Get the changes: the working tree diff, or the diff against the base branch if everything is committed.
 2. For each changed area, check:
-   - **Reuse:** does the repository already have a function, utility, or pattern that does this?
+   - **Reuse:** does the repository already have a function, utility, or pattern that does this? Check `.audit/feature-map.md` for where to look. If it is missing, run `familiarise` in a subagent.
    - **Duplication:** is the same logic repeated in the change?
    - **Complexity:** can it be shorter, flatter, or clearer without changing behaviour? Remove dead code, needless abstraction, and unused parameters.
    - **Efficiency:** are there obvious waste points, such as repeated work in loops or redundant calls?
