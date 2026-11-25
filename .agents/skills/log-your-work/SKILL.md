@@ -5,6 +5,8 @@ description: Log decision points and checkpoints to a TSV log while working. Use
 
 # Log your work
 
+You MUST run `scripts/log.sh` yourself to log each event, once per event, as it happens. Loading this skill does not log anything. If you write the rows in a batch at the end, every timestamp shows when you wrote the log instead of when the work happened.
+
 Record a row in the log each time one of these happens:
 
 - A major decision is made.
