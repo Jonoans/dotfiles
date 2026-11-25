@@ -4,7 +4,7 @@ For tasks that explore or experiment with a new feature idea without implementin
 
 ## Steps
 
-1. Start a subagent to invoke the `familiarise` skill first. Pass it the idea and what is unknown about it so it is directed in its objectives.
+1. Start a subagent to familiarise with the task and the repository using the `familiarise` skill. Pass it the idea and what is unknown about it so it is directed in its objectives.
 2. State the question the prototype must answer, such as feasibility, fit with the existing code, performance, or user experience. Define what result would count as success and what would rule the idea out. Log it with `log-your-work`.
 3. Scope the smallest experiment that answers the question. Skip anything that does not help answer it, such as polish, full error handling, and broad edge cases.
 4. Build the prototype in isolation from the production code, such as a scratch directory, a separate branch, or behind a flag. Reuse existing code where it helps, but do not change existing behaviour.

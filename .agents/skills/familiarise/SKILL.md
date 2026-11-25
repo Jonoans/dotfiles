@@ -14,6 +14,7 @@ Before starting work, understand the task and what already exists in the reposit
 
 ## 2. Investigate the repository
 
+- Check for `.audit/feature-map.md`. If it exists, use it to jump to the relevant areas instead of exploring the whole repository. If it is missing, build it with the `feature-map` skill. If the task moves or adds features, update the map when you finish.
 - Get the layout: top-level structure, README and docs, agent instruction files (e.g. `AGENTS.md`, `CLAUDE.md`), and build/config files.
 - Search for existing code related to the task: relevant keywords, synonyms, function and file names, and similar features.
 - Read the matches in full, along with their callers, tests, and configuration, to see how they work and what conventions they follow.

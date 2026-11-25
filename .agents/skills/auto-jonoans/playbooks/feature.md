@@ -6,7 +6,7 @@ For tasks that write a new feature.
 
 Log a row with `log-your-work` where a step says to.
 
-1. Familiarise with the task and the repository using the `familiarise` skill. For a large or unfamiliar repository, start a subagent and pass it the task context. Otherwise do it yourself. Log what will be reused.
+1. Start a subagent to familiarise with the task and the repository using the `familiarise` skill. Log what will be reused.
 2. Use the `architect` skill to plan the implementation, building on the familiarisation summary. For a small change, a short plan in your reply is enough. Log the plan.
 3. Implement the plan in its ordered steps, matching the surrounding code.
 4. Write or update tests covering the new behaviour and its edge cases. If you write none, say why in the report.

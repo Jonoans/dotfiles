@@ -13,3 +13,4 @@ If the project is git tracked, add a new entry in `.gitignore` to ignore the `.a
 
 - `.audit/architecture/`: artifacts from the `architect` skill, such as implementation plans.
 - `.audit/decisions/`: decisions made during the task, logged one per file.
+- `.audit/feature-map.md`: index of where functionality lives, from the `feature-map` skill.
