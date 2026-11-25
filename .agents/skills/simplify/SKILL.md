@@ -13,6 +13,7 @@ description: Review changed code for reuse, simplicity, and efficiency, then app
    - **Duplication:** is the same logic repeated in the change?
    - **Complexity:** can it be shorter, flatter, or clearer without changing behaviour? Remove dead code, needless abstraction, and unused parameters.
    - **Efficiency:** are there obvious waste points, such as repeated work in loops or redundant calls?
+   - **Unused boilerplate:** are there fields, options, or hooks copied from a sibling or template that nothing uses?
    - **Consistency:** do names, structure, and comments match the surrounding code?
 3. Apply the fixes. Keep behaviour identical and the diff small.
 4. Re-run the tests and lint to confirm nothing changed.

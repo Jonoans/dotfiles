@@ -8,6 +8,9 @@ description: Principles for designing and writing code that is simple, consisten
 - Reuse what exists before writing new code. Extend it rather than adding a parallel version.
 - Keep scope tight. Change only what the task needs, and don't build for needs that don't exist yet.
 - Write the simplest code that meets the requirement.
+- When you copy from a sibling, keep only the parts something here uses. Unused extras still cost maintenance.
+- If a command succeeds but produces no result, find out why before working around it.
+- When you reuse a helper named for another feature, rename it to a neutral name and report the change.
 - Match the surrounding code's naming, structure, error handling, and idioms.
 - Give each function, class, and module one responsibility and one reason to change. Keep functions small.
 - Define small, explicit interfaces. Hide internals and keep coupling low.

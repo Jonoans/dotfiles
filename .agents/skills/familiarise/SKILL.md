@@ -18,6 +18,8 @@ Before starting work, understand the task and what already exists in the reposit
 - Search for existing code related to the task: relevant keywords, synonyms, function and file names, and similar features.
 - Read the matches in full, along with their callers, tests, and configuration, to see how they work and what conventions they follow.
 - Check recent history (`git log`, `git log -S <term>`) for related or reverted work.
+- Find every touchpoint of the closest existing feature by searching for its identifiers, and list each file that mentions it. A new feature usually needs an entry in each, such as a list or registry of its siblings.
+- Find the build, test, and lint commands and any quirks, such as a required working directory.
 
 ## 3. Check for duplication
 
@@ -32,3 +34,4 @@ Before starting the task, note briefly:
 - What the task requires.
 - What already exists that is relevant (with file paths).
 - What genuinely needs to be added or changed, and what will be reused.
+- The touchpoint files and the build, test, and lint commands.

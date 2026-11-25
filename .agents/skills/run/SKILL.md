@@ -19,3 +19,4 @@ description: Launch the project's app and confirm a change works in the real app
 
 - Test the changed behaviour and the edge cases next to it, not only the happy path.
 - If the app cannot be run, say why. Do not claim it works.
+- If the app cannot run because a dependency is missing, check what you can without it (build, lint, tests that need no dependency). Report what was verified and what was not, and say the feature is not confirmed in the real app.

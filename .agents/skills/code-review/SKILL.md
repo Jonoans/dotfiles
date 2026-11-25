@@ -14,7 +14,7 @@ description: Review a diff, PR, branch, or path for correctness bugs and report 
    - Missing or swallowed error handling.
    - Null, empty, and boundary inputs.
    - Concurrency, ordering, and state problems.
-   - Broken callers, changed contracts, and missing updates elsewhere.
+   - Broken callers, changed contracts, and missing updates elsewhere, including a new item missing from a list or registry where its siblings appear.
    - Tests that do not test the behaviour they claim to.
 4. Verify each suspected bug by tracing the code or running it. Drop anything you cannot support.
 5. Report the findings, most severe first. For each, give the `file:line`, the defect, and a concrete failing scenario.

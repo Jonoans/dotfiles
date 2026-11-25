@@ -11,6 +11,8 @@ These apply to every task, whatever its type. Principles specific to a kind of w
 
 - Carry the task through to completion. Act on sensible defaults and ask only when blocked on a decision that is genuinely the user's to make.
 - Resolve ambiguity from the request and the code first.
+- If a request is still ambiguous, ask the user a question to clarify intent.
+- Before a long run of tool calls, say in one line what you are doing.
 - Do not commit, push, or take other outward-facing actions unless asked.
 
 ## Rigour
@@ -38,4 +40,4 @@ All subagents spawned while using the playbooks must be spawned with the subagen
 
 # Logging
 
-You must follow the `log-your-work` skill throughout every task.
+You must follow the `log-your-work` skill throughout every task. Run its script to log decisions, loading the skill is not enough.
